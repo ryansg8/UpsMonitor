@@ -51,7 +51,7 @@ def onPowerloss(client):
         vars = client.list_vars(UPS_NAME)
         status = vars[STATUS]
     end_time = time()
-    onPower(client, elapsed_time = round((end_time - start_time / 60), 2))
+    onPower(client, elapsed_time = round(((end_time - start_time) / 60), 2))
 
 def checkInternetConnection():
     try:
